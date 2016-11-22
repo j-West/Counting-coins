@@ -69,8 +69,22 @@ calculateButton.addEventListener('click', function() {
           amountToCalc -= (coinPurse.pennies * 1);
         }
 
+  // Create variable that will hold the created block level element that will hold coinPurse content
+  var p = "";
+  // for.. in loop to loop throuhg coinPurse object
+  for(var prop in coinPurse) {
+    // Create a new block level element
+    p = document.createElement("p");
+    // Add the coinPurse key/Values to the created <p> element
+    p.innerHTML = prop + ": " + coinPurse[prop];
+    // Add variable p which holds the <p> element with coinPurse content to the resultsDiv
+    resultDiv.appendChild(p); 
+    // Also output the coinPurse content to the console
+    console.log(prop + ": " + coinPurse[prop]);
+  }
+});
 
 
 
 
-    
+
