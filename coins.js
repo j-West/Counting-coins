@@ -24,4 +24,11 @@ var coinPurse = {
                 pennies : 0
                 };
 
-
+//Add event listener to calculateButton to listen for clicks.
+calculateButton.addEventListener('click', function() {
+  // Resetting the resultsDiv to erase the inner elements for multiple cases
+  resultDiv.innerHTML = "";
+  // Resetting the coinPurse objects values to 0 for multiplpe cases
+  for(var value in coinPurse) {
+    coinPurse[value] = 0;
+  }
