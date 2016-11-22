@@ -45,4 +45,18 @@ calculateButton.addEventListener('click', function() {
     amountToCalc -= (coinPurse.quarters * 25);
 
     // If amountToCalc is greater than or equal to 10
-  }
+  } if (amountToCalc >= 10) {
+      // Set coinPurse.quarters to the result of amountToCalc / 10.  Rounded down which will give the amount of quarters       
+      coinPurse.dimes = Math.floor(amountToCalc / 10);
+      // Multiple the amount of coinPurse.quarters by 10 to get the amount to be 
+      // subtracted from amountToCalc.. (3 dimes * 10 = 30 cents)
+      amountToCalc -= (coinPurse.dimes * 10);
+
+      // If amountToCalc is greater than or equal to 5
+    }
+
+
+
+
+
+    
