@@ -61,7 +61,13 @@ calculateButton.addEventListener('click', function() {
         amountToCalc -= (coinPurse.nickels * 5);
 
         // If amountToCalc is greater than or equal to 1
-      }
+      } if (amountToCalc >= 1) {
+          // Set coinPurse.quarters to the result of amountToCalc / 1.  Rounded down which will give the amount of quarters       
+          coinPurse.pennies = Math.floor(amountToCalc / 1);
+          // Multiple the amount of coinPurse.quarters by 1 to get the amount to be 
+          // subtracted from amountToCalc.. (3 pennies * 1 = 3 cents)
+          amountToCalc -= (coinPurse.pennies * 1);
+        }
 
 
 
