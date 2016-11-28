@@ -35,36 +35,36 @@ calculateButton.addEventListener('click', function() {
 
   // Variable to hold the user's input from the text input in index.html.  Multiplyed by 100 to work with integers
   var amountToCalc = (userInput.value * 100);
-  
+
   // If amountToCalc is greater than or equal to 25
   if (amountToCalc >= 25) {
-    // Set coinPurse.quarters to the result of amountToCalc / 25.  Rounded down which will give the amount of quarters       
+    // Set coinPurse.quarters to the result of amountToCalc / 25.  Rounded down which will give the amount of quarters
     coinPurse.quarters = Math.floor(amountToCalc / 25);
-    // Multiple the amount of coinPurse.quarters by 25 to get the amount to be 
+    // Multiple the amount of coinPurse.quarters by 25 to get the amount to be
     // subtracted from amountToCalc.. (3 quarters * 25 = 75 cents)
     amountToCalc -= (coinPurse.quarters * 25);
 
     // If amountToCalc is greater than or equal to 10
   } if (amountToCalc >= 10) {
-      // Set coinPurse.quarters to the result of amountToCalc / 10.  Rounded down which will give the amount of quarters       
+      // Set coinPurse.quarters to the result of amountToCalc / 10.  Rounded down which will give the amount of quarters
       coinPurse.dimes = Math.floor(amountToCalc / 10);
-      // Multiple the amount of coinPurse.quarters by 10 to get the amount to be 
+      // Multiple the amount of coinPurse.quarters by 10 to get the amount to be
       // subtracted from amountToCalc.. (3 dimes * 10 = 30 cents)
       amountToCalc -= (coinPurse.dimes * 10);
 
       // If amountToCalc is greater than or equal to 5
     } if (amountToCalc >= 5) {
-        // Set coinPurse.quarters to the result of amountToCalc / 5.  Rounded down which will give the amount of quarters       
+        // Set coinPurse.quarters to the result of amountToCalc / 5.  Rounded down which will give the amount of quarters
         coinPurse.nickels = Math.floor(amountToCalc / 5);
-        // Multiple the amount of coinPurse.quarters by 5 to get the amount to be 
+        // Multiple the amount of coinPurse.quarters by 5 to get the amount to be
         // subtracted from amountToCalc.. (3 nickles * 5 = 15 cents)
         amountToCalc -= (coinPurse.nickels * 5);
 
         // If amountToCalc is greater than or equal to 1
       } if (amountToCalc >= 1) {
-          // Set coinPurse.quarters to the result of amountToCalc / 1.  Rounded down which will give the amount of quarters       
+          // Set coinPurse.quarters to the result of amountToCalc / 1.  Rounded down which will give the amount of quarters
           coinPurse.pennies = Math.floor(amountToCalc / 1);
-          // Multiple the amount of coinPurse.quarters by 1 to get the amount to be 
+          // Multiple the amount of coinPurse.quarters by 1 to get the amount to be
           // subtracted from amountToCalc.. (3 pennies * 1 = 3 cents)
           amountToCalc -= (coinPurse.pennies * 1);
         }
@@ -78,13 +78,8 @@ calculateButton.addEventListener('click', function() {
     // Add the coinPurse key/Values to the created <p> element
     p.innerHTML = prop + ": " + coinPurse[prop];
     // Add variable p which holds the <p> element with coinPurse content to the resultsDiv
-    resultDiv.appendChild(p); 
+    resultDiv.appendChild(p);
     // Also output the coinPurse content to the console
     console.log(prop + ": " + coinPurse[prop]);
   }
 });
-
-
-
-
-
